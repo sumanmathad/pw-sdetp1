@@ -11,6 +11,7 @@ test('Enter user credentials and Login', async({page})=>{
 
     const titleText= await page.locator(".title[data-test='title']").textContent();
     await expect(titleText).toEqual('Products');
+    await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
 })
 
